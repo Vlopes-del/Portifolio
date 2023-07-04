@@ -1,31 +1,35 @@
 /* Reset */
- * {
+
+* {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 
-/* Variables */
-:root {
+/*Variables*/
+
+ :root {
   --main-color: #54B689;
   --main-text-color: #FFF;
   --border-color: #999;
   --bio-bg-color: #1E2A3A;
-  --bio-border-color: #293544;
+  --bio-border-box: #293544;
   --about-bg-color: #111821;
+
 }
 
-/* General */
+/* General*/
 .highlight {
   color: var(--main-color);
+
 }
 
 /* Containers */
 #container {
   display: flex;
   flex-direction: row;
-  color: var(--main-text-color);
+  background-color: var(--main-text-color);
 }
 
 #bio-container {
@@ -34,7 +38,7 @@
   background-color: var(--bio-bg-color);
   text-align: center;
   padding: 30px 12px;
-  border-right: 5px solid var(--bio-border-color);
+  border-right: 5px solid var(--bio-border-box)
 }
 
 #about-container {
@@ -44,31 +48,32 @@
   padding: 50px;
 }
 
-/* Bio container */
+/*Bio container*/
+
 #bio-container h2 {
   margin-bottom: 25px;
 }
 
 #bio-container p {
-  margin-bottom: 20px;
+   margin-bottom: 25px;
 }
 
 #bio-container #welcome-text {
   font-weight: bold;
 }
 
-#bio-image {
+#bio-img {
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  margin-bottom: 25px;
+  margin-bottom: 25x;
 }
 
 #social-container {
   display: flex;
   justify-content: center;
   list-style: none;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color); 
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
@@ -96,7 +101,7 @@
 #email-container a {
   color: var(--main-text-color);
   text-decoration: none;
-  max-width: 225px;
+  max-width: 255px;
 }
 
 #email-container ion-icon {
@@ -106,10 +111,12 @@
   max-width: 20px;
 }
 
-/* about container */
+/* About container*/
+
 #name {
   font-size: 42px;
   margin-bottom: 15px;
+  color: var(--main-text-color)
 }
 
 #title {
@@ -119,8 +126,9 @@
 }
 
 .description {
-  max-width: 75%;
+  max-width: 70%;
   margin-bottom: 10px;
+  color: var(--main-text-color);
 }
 
 #btn-projects {
@@ -140,7 +148,7 @@
 }
 
 #btn-projects ion-icon,
-#btn-projects span {
+#btn--projects span {
   flex: 1 1 0;
 }
 
@@ -158,12 +166,23 @@
   padding-top: 20px;
   margin-bottom: 20px;
   font-size: 32px;
+  color: var(--main-text-color);
 }
 
 #skills-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 25px;
+
+}
+
+.skills-title {
+  color: var(--main-text-color);
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 5px solid var(--main-color)
 }
 
 .skills-box {
@@ -172,22 +191,15 @@
   margin-bottom: 35px;
 }
 
-.skills-title {
-  font-size: 24px;
-  margin-bottom: 25px;
-  font-weight: bold;
-  padding-left: 10px;
-  border-left: 5px solid var(--main-color);
-}
-
 .skills-box i {
   font-size: 45px;
-  margin-right: 10px;
+  margin-right: 10px
 }
 
 /* Mobile */
-@media(max-width: 450px) {
 
+@media(max-width: 450px) {
+  
   #container {
     flex-direction: column;
   }
@@ -195,7 +207,7 @@
   #bio-container {
     min-height: auto;
     border-right: none;
-    border-bottom: 5px solid var(--bio-border-color);
+    border-bottom: 5px solid var(--bio-border-box);
   }
 
   #bio-container h2 {
@@ -217,7 +229,6 @@
     max-width: 100%;
     line-height: 26px;
   }
-
   #btn-projects {
     margin: 20px auto;
   }
@@ -228,9 +239,7 @@
     margin-bottom: 40px;
     text-align: left;
   }
-
-  .skills-box i {
+  .skills-box i{
     font-size: 60px;
   }
-
 }
